@@ -75,4 +75,4 @@ function Characters() {
         </div> )
 }
 
-export default Rick
+export default Characters
