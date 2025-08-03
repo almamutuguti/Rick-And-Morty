@@ -1,14 +1,11 @@
-
-import './App.css'
-import Rick from './components/Characters'
+import Characters from "./components/Characters"
+import './index.css'
 
 function App() {
-  
-
   return (
-    <Rick>
-      
-    </Rick>
+    <>
+      <Characters />
+    </>
   )
 }
 
