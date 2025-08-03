@@ -45,15 +45,16 @@ function Characters() {
     }, [])
 
     if (error) return <div className='p-4 text-red-600'>Error: {error} </div>
+
+    const handleDelete = (idToDelete) => {
+        setCharacters(characters.filter(character => character.id !== idToDelete))
+    };
     return (
-        <div 
-            className="min-h-screen bg-cover bg-center relative"
+        <div
+            className=""
             style={{ backgroundImage: `url(${background})` }}
         >
-            { }
-            <div className="absolute inset-0 bg-black bg-opacity-60 z-0" />
 
-            { }
             <div className="relative z-10 p-6 text-white">
                 <h2 className="font-semibold text-center text-2xl mb-6">
                     Rick and Morty Characters ({characters.length})
@@ -66,13 +67,13 @@ function Characters() {
                                 src={char.image} className='rounded-lg'
                             />
                             <h3 className='text-white'>{char.name}</h3>
-                            <button className='bg-red-600 text-white rounded-lg hover:bg-red-800 p-2 w-20 hover:cursor-pointer'>Delete</button>
+                            <button className='bg-red-600 text-white rounded-lg hover:bg-red-800 p-2 w-20 hover:cursor-pointer' onClick={() => handleDelete(char.id)}>Delete</button>
                         </div>
                     ))}
                 </div>
 
             </div>
-        </div> )
+        </div>)
 }
 
 export default Characters
