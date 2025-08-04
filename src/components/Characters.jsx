@@ -55,9 +55,8 @@ function Characters() {
     };
 
      const handleCardClick = (id) => {
-        setTimeout(() => {
-            navigate(`/character/${id}`);
-        }, 3000);
+        navigate(`/character/${id}`);
+        
     };
 
     // Filter characters based on search input
